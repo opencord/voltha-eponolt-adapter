@@ -2,14 +2,13 @@
 
 The EPON OLT adapter connects the VOLTHA
 core to an OLT device
-running the OLT hardware to support IEEE standard PON (SIEPON* package B). 
+running the OLT hardware to support IEEE standard PON (SIEPON* package A and B). 
 
 *IEEE P1904.1 Service Interoperability in Ethernet Passive Optical Network
 > NOTE: This adapter has been verified with the following combinations:
 > * [VOLTHA 2.5](https://docs.voltha.org/voltha-2.5/release_notes/voltha_2.5.html) 
-> * Tibit MicroPlug OLT (Firmware R1.3.0)
+> * Tibit MicroPlug OLT (Firmware R1.3.X-XXX)
 > * [Technology profile for EPON](https://github.com/opencord/voltha-lib-go/blob/master/pkg/techprofile/SingleQueueEponProfile.json)
-> * MD5 is implemented as IEEE802.1X authentication. 
 
 ## Development `make` targets
 

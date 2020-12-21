@@ -3314,9 +3314,10 @@ func (d *L2oamOnuDevice) recieveKeepAlive(etherPacket *layers.Ethernet) {
 	if (l2oam.OnuPkgType == l2oam.OnuPkgTypeA) && (packet.IsOnuPkgA()) {
 		logger.Info(context.Background(), fmt.Sprintf("[%s] recieveKeepAlive() Pkg type A.", d.getDeviceName()))
 		if d.keepAliveResponse != nil {
-			d.keepAliveResponse <- "PkgTypeError"
+			//d.keepAliveResponse <- "PkgTypeError"
+			d.keepAliveResponse <- "success"
 		}
-		// d.Base.recieveKeepAlive(etherPacket)
+		d.Base.recieveKeepAlive(etherPacket)
 		d.PkgType = l2oam.OnuPkgTypeA
 	} else if (l2oam.OnuPkgType == l2oam.OnuPkgTypeB) && (packet.IsOnuPkgB()) {
 		logger.Info(context.Background(), fmt.Sprintf("[%s] recieveKeepAlive() Pkg type B.", d.getDeviceName()))
